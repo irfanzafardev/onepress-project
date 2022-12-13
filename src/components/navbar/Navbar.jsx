@@ -7,7 +7,7 @@ import { GoThreeBars } from "react-icons/go";
 const Navbar = () => {
 	return (
 		<>
-			<nav>
+			<nav className="row align-items-center">
 				<div className="container-fluid">
 					<div className="nav-brand bg-">ONEPRESS</div>
 					<div className="nav-items d-lg-flex">

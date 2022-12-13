@@ -19,6 +19,7 @@ nav .container-fluid {
 }
 
 nav .nav-brand {
+	font-family: "ESAllianz-Regular", sans-serif;
 	width: 100%;
 	font-size: 28px;
 	font-weight: 600;
@@ -34,6 +35,7 @@ nav .nav-items {
 }
 
 nav .nav-items .item {
+	font-family: "ESAllianz-Regular", sans-serif;
 	padding: 5px 0;
 	text-align: center;
 	margin-inline: 12%;
@@ -42,6 +44,7 @@ nav .nav-items .item {
 }
 
 nav .nav-items .item-btn button {
+	font-family: "ESAllianz-Regular", sans-serif;
 	width: 150px;
 	height: 50px;
 	display: flex;

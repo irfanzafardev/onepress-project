@@ -1,12 +1,26 @@
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Landing from "./pages/Landing.jsx";
+import Registration from "./pages/Registration";
 import "./reset.css";
-import Navbar from "../src/components/navbar/Navbar";
-import Header from "../src/components/header/Header";
 
 const App = () => {
   return (
     <div>
-      <Navbar />
-      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Landing />} />
+            <Route path="registration" element={<Registration />} />
+            <Route path="post">
+              <Route path=":id" element="" />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }
