@@ -1,0 +1,71 @@
+section .container-fluid {
+	width: 100%;
+	padding: 0 60px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section .container-fluid .heading {
+	margin-top: 180px;
+}
+
+section .container-fluid h1 {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 4.6rem;
+	line-height: 6rem;
+	letter-spacing: 0em;
+	text-align: left;
+	text-indent: calc(100% / 12 * 4);
+}
+
+@media (max-width: 768px) {
+	section .container-fluid h1 {
+		text-indent: calc(100% / 12 * 0);
+	}
+}
+
+section .container-fluid .content {
+	margin-top: 20px;
+}
+
+section .container-fluid .content .developer span {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.3rem;
+	line-height: 1.5;
+	letter-spacing: 0rem;
+}
+
+section .container-fluid .content .developer p {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 0.8rem;
+	line-height: 1.2777777777778;
+	letter-spacing: 0rem;
+	color: rgb(219, 219, 219);
+	margin-bottom: 14px;
+}
+
+section .container-fluid .content .location span {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.3rem;
+	line-height: 1.5;
+	letter-spacing: 0rem;
+}
+
+section .container-fluid .content .location p {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 0.8rem;
+	line-height: 1.2777777777778;
+	letter-spacing: 0rem;
+	color: rgb(219, 219, 219);
+	margin-bottom: 14px;
+}
