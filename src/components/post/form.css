@@ -1,0 +1,61 @@
+section .form {
+	width: 100%;
+	padding: 0 60px;
+	padding-top: 100px;
+}
+
+section .form h1 {
+	display: inline;
+}
+
+section .form .form-group {
+	margin: 20px 0 20px 0;
+	padding: 0;
+}
+
+section .form .form-group .file-input-icon {
+	cursor: pointer;
+	margin-top: -200px;
+}
+
+section .form .form-group .file-input {
+	display: none;
+}
+
+section .form .form-group .title-input {
+	border: none;
+	width: 70vw;
+	height: 70px;
+	padding: 20px;
+	margin: 20px 0 0 20px;
+	font-size: 32px;
+}
+
+section .form .form-group .title-input:focus {
+	background-color: transparent;
+	outline: none;
+}
+
+section .form .form-group .body-input {
+	border: none;
+	width: 70vw;
+	padding: 20px;
+	font-size: 28px;
+}
+
+section .form .form-group .body-input:focus {
+	background-color: transparent;
+	outline: none;
+}
+
+section .form button {
+	font-family: "ESAllianz-Regular", sans-serif;
+	width: 150px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0%;
+	text-align: center;
+	font-size: 16px;
+}

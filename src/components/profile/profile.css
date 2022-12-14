@@ -1,0 +1,9 @@
+section .profile {
+	width: 100%;
+	padding: 0 60px;
+	padding-top: 100px;
+}
+
+section .profile h1 {
+	display: inline;
+}

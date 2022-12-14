@@ -17,13 +17,28 @@ const Navbar = () => {
 						<div className="item">
 							<BiSearch size="2rem" />
 						</div>
-						<div className="item">Home</div>
+						<div className="item">
+							<Link to="/" className="link">
+								Home
+							</Link>
+						</div>
 						<div className="item">Categories</div>
-						<div className="item">Profile</div>
+						<div className="item">
+							<Link to="/profile" className="link">
+								Profile
+							</Link>
+						</div>
 						<div className="item-btn">
 							<Link to="/login" className="link">
 								<button type="button" className="btn btn-outline-dark">
 									Sign in
+								</button>
+							</Link>
+						</div>
+						<div className="item-btn ms-3">
+							<Link to="/post/create" className="link">
+								<button type="button" className="btn btn-outline-dark">
+									Create story
 								</button>
 							</Link>
 						</div>

@@ -7,6 +7,8 @@ import Landing from "./pages/Landing.jsx";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
 import Post from "./pages/PostDetail";
+import PostForm from "./pages/PostForm";
+import ProfilePage from "./pages/ProfilePage";
 import "./reset.css";
 
 const App = () => {
@@ -20,7 +22,9 @@ const App = () => {
           <Route path="post">
             <Route path=":id" element={<Post />} />
             <Route path="test" element={<Post />} />
+            <Route path="create" element={<PostForm />} />
           </Route>
+          <Route path="profile" element={<ProfilePage />} />
         </Route>
       </Routes>
     </BrowserRouter>
