@@ -4,9 +4,10 @@ import "./header.css";
 const Header = () => {
 	return (
 		<section>
-			<div className="container-fluid">
+			<div className="container-fluid header">
 				<div className="heading">
-					<h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h1>
+					{/* <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h1> */}
+					<h1>Halo semua pengunjung situs, selamat datang di tempat para "artist" membagikan karya dan ceritanya.</h1>
 				</div>
 				<div className="content row">
 					<div className="developer col-4">

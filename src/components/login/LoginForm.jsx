@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./registration.css";
+import "./login.css";
 
-const RegistrationForm = () => {
+const LoginForm = () => {
 	return (
 		<>
 			<nav className="row align-items-center fixed-top">
@@ -14,9 +14,9 @@ const RegistrationForm = () => {
 					</div>
 					<div className="nav-items d-lg-flex">
 						<div className="item-btn">
-							<Link to="/login" className="link">
+							<Link to="/registration" className="link">
 								<button type="button" className="btn btn-outline-dark">
-									Sign in
+									Register
 								</button>
 							</Link>
 						</div>
@@ -24,27 +24,19 @@ const RegistrationForm = () => {
 				</div>
 			</nav>
 			<div class="login-box">
-				<h2>Registration</h2>
+				<h2>Log in</h2>
 				<form>
 					<div class="user-box">
 						<input type="text" name="" required=""></input>
 						<label>Username</label>
 					</div>
 					<div class="user-box">
-						<input type="text" name="" required=""></input>
-						<label>Email</label>
-					</div>
-					<div class="user-box">
 						<input type="password" name="" required=""></input>
 						<label>Password</label>
 					</div>
-					<div class="user-box">
-						<input type="password" name="" required=""></input>
-						<label>Confirm Password</label>
-					</div>
 					<div className="item-btn float-end">
 						<button type="button" className="btn btn-outline-dark">
-							Sign Up
+							Log in
 						</button>
 					</div>
 				</form>
@@ -53,4 +45,4 @@ const RegistrationForm = () => {
 	);
 };
 
-export default RegistrationForm;
+export default LoginForm;

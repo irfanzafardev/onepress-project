@@ -1,0 +1,15 @@
+footer .container-fluid {
+	width: 100%;
+	height: 100vh;
+	padding: 0 60px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+footer .container-fluid .footer-heading {
+	width: 100%;
+	height: 50%;
+	padding: 0 60px;
+	align-items: center;
+	justify-content: space-between;
+}

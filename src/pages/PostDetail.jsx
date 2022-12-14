@@ -1,18 +1,17 @@
 import React from "react";
 import Navbar from "../components/navbar/Navbar";
 import Header from "../components/header/Header";
-import FeaturedPost from "../components/featuredPost/FeaturedPost";
+import Post from "../components/post/Post";
 import Footer from "../components/footer/Footer";
 
-const Landing = () => {
+const PostDetail = () => {
 	return (
 		<>
 			<Navbar />
-			<Header />
-			<FeaturedPost />
+			<Post />
 			<Footer />
 		</>
 	);
 };
 
-export default Landing;
+export default PostDetail;

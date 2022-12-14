@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.css";
 
 import { BiSearch } from "react-icons/bi";
@@ -7,7 +8,7 @@ import { GoThreeBars } from "react-icons/go";
 const Navbar = () => {
 	return (
 		<>
-			<nav className="row align-items-center">
+			<nav className="row align-items-center fixed-top">
 				<div className="container-fluid">
 					<div className="nav-brand bg-">ONEPRESS</div>
 					<div className="nav-items d-lg-flex">
@@ -18,9 +19,11 @@ const Navbar = () => {
 						<div className="item">Categories</div>
 						<div className="item">Profile</div>
 						<div className="item-btn">
-							<button type="button" className="btn btn-outline-dark">
-								Sign in
-							</button>
+							<Link to="/login" className="link">
+								<button type="button" className="btn btn-outline-dark">
+									Sign in
+								</button>
+							</Link>
 						</div>
 					</div>
 					<div className="mobile-toggler d-lg-none ms-5">

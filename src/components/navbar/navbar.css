@@ -1,7 +1,7 @@
 nav {
 	display: flex;
 	align-items: center;
-	width: 100%;
+	width: 100vw;
 	height: 100px;
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 400;
@@ -54,6 +54,16 @@ nav .nav-items .item-btn button {
 	text-align: center;
 	margin-inline: 12%;
 	font-size: 16px;
+}
+
+.link {
+	text-decoration: none;
+	color: #000;
+}
+
+.link:hover {
+	text-decoration: none;
+	color: #000;
 }
 
 /* Modal */
