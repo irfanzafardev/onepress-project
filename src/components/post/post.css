@@ -1,0 +1,17 @@
+section .post {
+	width: 100%;
+	padding: 0 60px;
+	padding-top: 100px;
+}
+
+section .post .post-header img {
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+	margin-top: 20px;
+}
+
+section .post .post-title h1 {
+	display: inline;
+	text-align: left;
+}

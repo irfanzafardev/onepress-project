@@ -10,7 +10,9 @@ const Navbar = () => {
 		<>
 			<nav className="row align-items-center fixed-top">
 				<div className="container-fluid">
-					<div className="nav-brand bg-">ONEPRESS</div>
+					<Link to="/" className="link">
+						<div className="nav-brand">ONEPRESS</div>
+					</Link>
 					<div className="nav-items d-lg-flex">
 						<div className="item">
 							<BiSearch size="2rem" />
