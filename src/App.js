@@ -3,12 +3,12 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import Landing from "./pages/Landing.jsx";
-import Login from "./pages/Login";
-import Registration from "./pages/Registration";
-import Post from "./pages/PostDetail";
-import PostForm from "./pages/PostForm";
-import ProfilePage from "./pages/ProfilePage";
+import Landing from "./pages/landing/Landing.jsx";
+import Login from "./pages/auth/Login";
+import Registration from "./pages/auth/Registration";
+import Post from "./pages/post/PostDetail";
+import PostForm from "./pages/post/PostForm";
+import ProfilePage from "./pages/profile/ProfilePage";
 import "./reset.css";
 
 const App = () => {

@@ -1,6 +1,5 @@
 import React from "react";
 import "./profile.css";
-// import { BiUserCircle } from "react-icons/bi";
 
 const Profile = () => {
 	return (

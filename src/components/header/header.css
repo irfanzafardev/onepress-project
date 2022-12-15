@@ -1,4 +1,8 @@
-section .container-fluid.header {
+section.header {
+	width: 100%;
+}
+
+section.header .container-fluid {
 	width: 100%;
 	height: 100vh;
 	padding-top: 260px;
@@ -8,7 +12,7 @@ section .container-fluid.header {
 	justify-content: space-between;
 }
 
-section .container-fluid h1 {
+section.header .container-fluid h1 {
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 500;
 	font-style: normal;
@@ -20,16 +24,17 @@ section .container-fluid h1 {
 }
 
 @media (max-width: 768px) {
-	section .container-fluid h1 {
+	section.header .container-fluid h1 {
 		text-indent: calc(100% / 12 * 0);
 	}
 }
 
-section .container-fluid .content {
+section.header .container-fluid .content {
+	width: 100%;
 	margin-top: 20px;
 }
 
-section .container-fluid .content .developer span {
+section.header .container-fluid .content .developer span {
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -38,7 +43,7 @@ section .container-fluid .content .developer span {
 	letter-spacing: 0rem;
 }
 
-section .container-fluid .content .developer p {
+section.header .container-fluid .content .developer p {
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 500;
 	font-style: normal;
@@ -49,7 +54,7 @@ section .container-fluid .content .developer p {
 	margin-bottom: 14px;
 }
 
-section .container-fluid .content .location span {
+section.header .container-fluid .content .location span {
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -58,7 +63,27 @@ section .container-fluid .content .location span {
 	letter-spacing: 0rem;
 }
 
-section .container-fluid .content .location p {
+section.header .container-fluid .content .location p {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 0.8rem;
+	line-height: 1.2777777777778;
+	letter-spacing: 0rem;
+	color: rgb(219, 219, 219);
+	margin-bottom: 14px;
+}
+
+section.header .container-fluid .content .email span {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.3rem;
+	line-height: 1.5;
+	letter-spacing: 0rem;
+}
+
+section.header .container-fluid .content .email p {
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 500;
 	font-style: normal;

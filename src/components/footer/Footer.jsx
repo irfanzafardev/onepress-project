@@ -1,6 +1,8 @@
 import React from "react";
 import "./footer.css";
 
+import { BsArrowUpRight } from "react-icons/bs";
+
 const Footer = () => {
 	return (
 		<footer>
@@ -21,17 +23,38 @@ const Footer = () => {
 					</div>
 					<div className="col-3">
 						<ul>
-							<li>footer</li>
+							<li>
+								<a href="https://github.com/irfanzafardev/onepress-project" target="_blank" rel="noreferrer">
+									github
+									<span>
+										<BsArrowUpRight size="1.1rem" />
+									</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 					<div className="col-3">
 						<ul>
-							<li>footer</li>
+							<li>
+								<a href="https://github.com/irfanzafardev/onepress-project" target="_blank" rel="noreferrer">
+									link
+									<span>
+										<BsArrowUpRight size="1.1rem" />
+									</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 					<div className="col-3">
 						<ul>
-							<li>footer</li>
+							<li>
+								<a href="https://github.com/irfanzafardev/onepress-project" target="_blank" rel="noreferrer">
+									link
+									<span>
+										<BsArrowUpRight size="1.1rem" />
+									</span>
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>

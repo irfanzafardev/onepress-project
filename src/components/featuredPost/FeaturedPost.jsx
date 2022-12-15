@@ -1,6 +1,6 @@
 import React from "react";
 import "./featuredpost.css";
-import Posts from "../posts/Posts";
+// import Posts from "../posts/Posts";
 
 import { BsArrowDownShort } from "react-icons/bs";
 import { Link } from "react-router-dom";
@@ -29,9 +29,9 @@ const FeaturedPost = ({ posts }) => {
 					<div className="heading">
 						<h2>Featured</h2>
 					</div>
-					{posts.map((p) => (
+					{/* {posts.map((p) => (
 						<Posts post={p} />
-					))}
+					))} */}
 					<div className="col-6">
 						<Link to={`/post/test`} className="link">
 							<div className="card">

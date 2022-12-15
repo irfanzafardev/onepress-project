@@ -29,3 +29,12 @@ footer .container-fluid .footer-information ul li {
 	font-family: "ESAllianz-Regular", sans-serif;
 	line-height: 26px;
 }
+
+footer .container-fluid .footer-information ul li a {
+	text-decoration: none;
+	color: #000;
+}
+
+footer .container-fluid .footer-information ul li span {
+	cursor: pointer;
+}

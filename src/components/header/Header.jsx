@@ -3,10 +3,9 @@ import "./header.css";
 
 const Header = () => {
 	return (
-		<section>
-			<div className="container-fluid header">
+		<section className="header">
+			<div className="container-fluid">
 				<div className="heading">
-					{/* <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</h1> */}
 					<h1>Halo semua pengunjung situs, selamat datang di tempat para "artist" membagikan karya dan ceritanya.</h1>
 				</div>
 				<div className="content row">
@@ -24,7 +23,7 @@ const Header = () => {
 						<p>LOCATION-</p>
 						<span>Jakarta, ID</span>
 					</div>
-					<div className="location col-4">
+					<div className="email col-4">
 						<p>GET IN TOUCH-</p>
 						<span>hello@mail.com</span>
 					</div>
