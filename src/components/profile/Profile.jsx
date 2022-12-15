@@ -3,8 +3,8 @@ import "./profile.css";
 
 const Profile = () => {
 	return (
-		<section>
-			<div className="container-fluid profile">
+		<section className="profile">
+			<div className="container-fluid">
 				<div className="profile-heading">
 					<h1>Profile</h1>
 				</div>

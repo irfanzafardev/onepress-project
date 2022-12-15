@@ -7,7 +7,7 @@ const Sidebar = () => {
 			<div className="sidebar-content">
 				<div className="sidebar-item">
 					<div className="sidebar-heading">
-						<h4>About Author</h4>
+						<h4>About</h4>
 					</div>
 					<div className="author-img">
 						<img src="https://images.pexels.com/photos/2387335/pexels-photo-2387335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />

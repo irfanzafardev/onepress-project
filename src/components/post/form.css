@@ -1,28 +1,34 @@
-section .form {
+section.form {
 	width: 100%;
 	padding: 0 60px;
 	padding-top: 100px;
 }
 
-section .form h1 {
+section.form h1 {
 	display: inline;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.888888888888889rem;
+	line-height: 4.444444444444445rem;
+	letter-spacing: 0rem;
 }
 
-section .form .form-group {
+section.form .form-group {
 	margin: 20px 0 20px 0;
 	padding: 0;
 }
 
-section .form .form-group .file-input-icon {
+section.form .form-group .file-input-icon {
 	cursor: pointer;
 	margin-top: -200px;
 }
 
-section .form .form-group .file-input {
+section.form .form-group .file-input {
 	display: none;
 }
 
-section .form .form-group .title-input {
+section.form .form-group .title-input {
 	border: none;
 	width: 70vw;
 	height: 70px;
@@ -31,24 +37,24 @@ section .form .form-group .title-input {
 	font-size: 32px;
 }
 
-section .form .form-group .title-input:focus {
+section.form .form-group .title-input:focus {
 	background-color: transparent;
 	outline: none;
 }
 
-section .form .form-group .body-input {
+section.form .form-group .body-input {
 	border: none;
 	width: 70vw;
 	padding: 20px;
 	font-size: 28px;
 }
 
-section .form .form-group .body-input:focus {
+section.form .form-group .body-input:focus {
 	background-color: transparent;
 	outline: none;
 }
 
-section .form button {
+section.form button {
 	font-family: "ESAllianz-Regular", sans-serif;
 	width: 150px;
 	height: 50px;

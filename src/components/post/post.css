@@ -18,6 +18,49 @@ section.post .post-header img {
 section.post .post-title h1 {
 	display: inline;
 	text-align: left;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.888888888888889rem;
+	line-height: 4.444444444444445rem;
+	letter-spacing: 0rem;
+}
+
+section.post .post-detail {
+	margin-top: 12px;
+}
+section.post .post-detail h3 {
+	display: inline;
+	text-align: left;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.2rem;
+	letter-spacing: 0rem;
+}
+
+section.post .post-detail span {
+	display: inline;
+	margin-inline: 1%;
+	text-align: left;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.2rem;
+	letter-spacing: 0rem;
+}
+
+section.post .post-body {
+	margin-top: 20px;
+}
+
+section.post .post-body p {
+	display: inline;
+	text-align: left;
+	font-style: normal;
+	font-size: 1.7rem;
+	line-height: 2.1rem;
+	letter-spacing: 0rem;
 }
 
 section.post .author-img {

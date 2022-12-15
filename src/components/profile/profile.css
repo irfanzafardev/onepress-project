@@ -1,47 +1,53 @@
-section .profile {
+section.profile {
 	width: 100%;
 	padding: 0 60px;
 	padding-top: 100px;
 }
 
-section .profile h1 {
+section.profile h1 {
 	display: inline;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.888888888888889rem;
+	line-height: 4.444444444444445rem;
+	letter-spacing: 0rem;
 }
 
-section .profile .profile-form {
+section.profile .profile-form {
 	display: flex;
 	flex-direction: column;
 }
 
-section .profile .profile-form .profile-pic {
+section.profile .profile-form .profile-pic {
 	display: flex;
 	align-items: center;
 	margin: 20px 0;
 }
 
-section .profile .profile-form .profile-pic img {
+section.profile .profile-form .profile-pic img {
 	width: 80px;
 	height: 80px;
 	border-radius: 100%;
 	object-fit: cover;
 }
 
-section .profile .profile-form .profile-pic-btn {
+section.profile .profile-form .profile-pic-btn {
 	align-items: center;
 	justify-content: start;
 	cursor: pointer;
 }
 
-section .profile .profile-form .form-group {
+section.profile .profile-form .form-group {
 	margin-top: 20px;
 }
 
-section .profile .profile-form .form-group label {
+section.profile .profile-form .form-group label {
 	display: block;
 	font-size: 20px;
 }
 
-section .profile .profile-form .form-group input {
+section.profile .profile-form .form-group input {
 	display: flex;
 	width: 100%;
 	margin: 10px 0;
@@ -50,11 +56,11 @@ section .profile .profile-form .form-group input {
 	border-bottom: 1px solid #000;
 }
 
-section .profile .profile-form .form-group input:focus {
+section.profile .profile-form .form-group input:focus {
 	outline: none;
 }
 
-section .profile .profile-form .form-group textarea {
+section.profile .profile-form .form-group textarea {
 	display: flex;
 	width: 100%;
 	margin: 10px 0;
@@ -63,6 +69,6 @@ section .profile .profile-form .form-group textarea {
 	border-bottom: 1px solid #000;
 }
 
-section .profile .profile-form .form-group textarea:focus {
+section.profile .profile-form .form-group textarea:focus {
 	outline: none;
 }

@@ -5,16 +5,36 @@ section.sidebar {
 }
 
 section.sidebar .sidebar-heading h4 {
-	width: 100%;
+	text-align: center;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.7rem;
+	line-height: 4.444444444444445rem;
+	letter-spacing: 0rem;
 }
 
 section.sidebar .author-img {
 	width: 100%;
+	text-align: center;
 }
 
 section.sidebar .author-img img {
-	width: 260px;
-	height: 260px;
+	width: 240px;
+	height: 240px;
 	object-fit: cover;
 	border-radius: 100%;
+}
+
+section.sidebar .author-desc {
+	margin-top: 20px;
+}
+
+section.sidebar .author-desc h4 {
+	text-align: center;
+}
+
+section.sidebar .author-desc p {
+	text-align: justify;
+	margin-top: 5px;
 }

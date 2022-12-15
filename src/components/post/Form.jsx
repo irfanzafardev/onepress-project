@@ -5,8 +5,8 @@ import { GrAdd } from "react-icons/gr";
 
 const Form = () => {
 	return (
-		<section>
-			<div className="container-fluid form">
+		<section className="form">
+			<div className="container-fluid">
 				<h1>Create a new story</h1>
 				<form>
 					<div className="form-group">
