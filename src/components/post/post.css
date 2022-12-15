@@ -1,26 +1,30 @@
-section .post {
+section.post {
+	width: 100%;
+}
+
+section.post .container-fluid {
 	width: 100%;
 	padding: 0 60px;
 	padding-top: 100px;
 }
 
-section .post .post-header img {
+section.post .post-header img {
 	width: 100%;
 	height: 500px;
 	object-fit: cover;
 	margin-top: 20px;
 }
 
-section .post .post-title h1 {
+section.post .post-title h1 {
 	display: inline;
 	text-align: left;
 }
 
-section .post .author-img {
+section.post .author-img {
 	width: 100%;
 }
 
-section .post .author-img img {
+section.post .author-img img {
 	width: 260px;
 	height: 260px;
 	object-fit: cover;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 
@@ -6,6 +6,10 @@ import { BiSearch } from "react-icons/bi";
 import { GoThreeBars } from "react-icons/go";
 
 const Navbar = () => {
+	const [isActive, setActive] = useState(false);
+	const toggleClass = () => {
+		setActive(!isActive);
+	};
 	return (
 		<>
 			<nav className="row align-items-center fixed-top">
@@ -22,7 +26,20 @@ const Navbar = () => {
 								Home
 							</Link>
 						</div>
-						<div className="item">Categories</div>
+						<div className="item">
+							<span onClick={toggleClass}>Categories</span>
+							<ul className={isActive ? "nav-dropdown d-block" : "nav-dropdown d-none"}>
+								<li>
+									<div className="dropdown-item">Category item</div>
+								</li>
+								<li>
+									<div className="dropdown-item">Category item</div>
+								</li>
+								<li>
+									<div className="dropdown-item">Category item</div>
+								</li>
+							</ul>
+						</div>
 						<div className="item">
 							<Link to="/profile" className="link">
 								Profile

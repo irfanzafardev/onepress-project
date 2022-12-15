@@ -43,6 +43,13 @@ nav .nav-items .item {
 	cursor: pointer;
 }
 
+.nav-dropdown {
+	position: absolute;
+	display: block;
+	z-index: 1;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
 nav .nav-items .item-btn button {
 	font-family: "ESAllianz-Regular", sans-serif;
 	width: 150px;

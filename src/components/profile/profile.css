@@ -7,3 +7,62 @@ section .profile {
 section .profile h1 {
 	display: inline;
 }
+
+section .profile .profile-form {
+	display: flex;
+	flex-direction: column;
+}
+
+section .profile .profile-form .profile-pic {
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+}
+
+section .profile .profile-form .profile-pic img {
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	object-fit: cover;
+}
+
+section .profile .profile-form .profile-pic-btn {
+	align-items: center;
+	justify-content: start;
+	cursor: pointer;
+}
+
+section .profile .profile-form .form-group {
+	margin-top: 20px;
+}
+
+section .profile .profile-form .form-group label {
+	display: block;
+	font-size: 20px;
+}
+
+section .profile .profile-form .form-group input {
+	display: flex;
+	width: 100%;
+	margin: 10px 0;
+	height: 30px;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+
+section .profile .profile-form .form-group input:focus {
+	outline: none;
+}
+
+section .profile .profile-form .form-group textarea {
+	display: flex;
+	width: 100%;
+	margin: 10px 0;
+	height: 30px;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+
+section .profile .profile-form .form-group textarea:focus {
+	outline: none;
+}

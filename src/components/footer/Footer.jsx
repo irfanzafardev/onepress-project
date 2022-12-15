@@ -21,17 +21,17 @@ const Footer = () => {
 					</div>
 					<div className="col-3">
 						<ul>
-							<li>ppp</li>
+							<li>footer</li>
 						</ul>
 					</div>
 					<div className="col-3">
 						<ul>
-							<li>ppp</li>
+							<li>footer</li>
 						</ul>
 					</div>
 					<div className="col-3">
 						<ul>
-							<li>ppp</li>
+							<li>footer</li>
 						</ul>
 					</div>
 				</div>
