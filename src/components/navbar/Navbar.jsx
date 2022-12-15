@@ -30,7 +30,9 @@ const Navbar = () => {
 							<span onClick={toggleClass}>Categories</span>
 							<ul className={isActive ? "nav-dropdown d-block" : "nav-dropdown d-none"}>
 								<li>
-									<div className="dropdown-item">Category item</div>
+									<Link to="/category/test" className="link">
+										<div className="dropdown-item">Category item</div>
+									</Link>
 								</li>
 								<li>
 									<div className="dropdown-item">Category item</div>

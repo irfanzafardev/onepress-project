@@ -8,6 +8,7 @@ import Login from "./pages/auth/Login";
 import Registration from "./pages/auth/Registration";
 import Post from "./pages/post/PostDetail";
 import PostForm from "./pages/post/PostForm";
+import PostByCategory from "./pages/post/PostByCategory";
 import ProfilePage from "./pages/profile/ProfilePage";
 import "./reset.css";
 
@@ -23,6 +24,9 @@ const App = () => {
             <Route path=":id" element={<Post />} />
             <Route path="test" element={<Post />} />
             <Route path="create" element={<PostForm />} />
+          </Route>
+          <Route path="category">
+            <Route path="test" element={<PostByCategory />} />
           </Route>
           <Route path="profile" element={<ProfilePage />} />
         </Route>
