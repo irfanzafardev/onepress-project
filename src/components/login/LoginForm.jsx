@@ -4,16 +4,14 @@ import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
 
 const LoginForm = () => {
-	const [email, setEmail] = useState("");
+	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const navigate = useNavigate()
 
 	const handleLogin = async (event) => {
-		console.log(event)
 		event.preventDefault();
 		try {
-			const { data } = await axios.post("/user/login", { email, password });
-			console.log(data);
+			const { data } = await axios.post("/user/login", { username, password });
 			navigate('/')
 		} catch (error) {}
 	};
@@ -41,7 +39,7 @@ const LoginForm = () => {
 				<h2>Log in</h2>
 				<form>
 					<div class="user-box">
-						<input type="text" onChange={(e) => setEmail(e.target.value)} required></input>
+						<input type="text" onChange={(e) => setUsername(e.target.value)} required></input>
 						<label>Username</label>
 					</div>
 					<div class="user-box">
