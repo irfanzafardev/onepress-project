@@ -4,8 +4,10 @@ import "./navbar.css";
 
 import { BiSearch } from "react-icons/bi";
 import { GoThreeBars } from "react-icons/go";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+	const {currentUser} = useSelector(state=>state.user)
 	const [isActive, setActive] = useState(false);
 	const toggleClass = () => {
 		setActive(!isActive);
