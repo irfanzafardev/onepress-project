@@ -10,6 +10,11 @@ const Navbar = () => {
 	const toggleClass = () => {
 		setActive(!isActive);
 	};
+
+	const [isSearchActive, setSearchActive] = useState(false);
+	const toggleSearchClass = () => {
+		setSearchActive(!isSearchActive);
+	};
 	return (
 		<>
 			<nav className="row align-items-center fixed-top">
@@ -19,7 +24,12 @@ const Navbar = () => {
 					</Link>
 					<div className="nav-items d-lg-flex">
 						<div className="item">
-							<BiSearch size="2rem" />
+							<input className={isSearchActive ? "search-box d-block" : "search-box d-none"} placeholder="Search" />
+						</div>
+						<div className="item">
+							<div className="search-icon" onClick={toggleSearchClass}>
+								<BiSearch size="2rem" />
+							</div>
 						</div>
 						<div className="item">
 							<Link to="/" className="link">

@@ -38,9 +38,32 @@ nav .nav-items .item {
 	font-family: "ESAllianz-Regular", sans-serif;
 	padding: 5px 0;
 	text-align: center;
-	margin-inline: 7%;
+	margin-inline: 30px;
 	font-size: 20px;
 	cursor: pointer;
+}
+
+nav .nav-items .item:first-child {
+	font-family: "ESAllianz-Regular", sans-serif;
+	padding: 5px 0;
+	text-align: center;
+	margin-inline: 0px;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+nav .nav-items .item .search-box {
+	font-family: "ESAllianz-Regular", sans-serif;
+	padding: 5px 0;
+	text-align: start;
+	margin-inline: 7%;
+	font-size: 20px;
+	border: none;
+	border-bottom: 1px solid#000;
+}
+
+nav .nav-items .item .search-box:focus {
+	outline: none;
 }
 
 nav .nav-items .nav-dropdown {
