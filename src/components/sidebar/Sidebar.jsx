@@ -13,7 +13,7 @@ const Sidebar = () => {
 						<img src="https://images.pexels.com/photos/2387335/pexels-photo-2387335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
 					</div>
 					<div className="author-desc">
-						<h4>Author Name</h4>
+						<h4>Author name</h4>
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, nobis! Distinctio doloribus in culpa exercitationem</p>
 					</div>
 				</div>

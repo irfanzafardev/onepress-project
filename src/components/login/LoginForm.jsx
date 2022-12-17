@@ -6,13 +6,15 @@ import "./login.css";
 const LoginForm = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 
 	const handleLogin = async (event) => {
+		console.log(event);
 		event.preventDefault();
 		try {
-			const { data } = await axios.post("/user/login", { username, password });
-			navigate('/')
+			const { data } = await axios.post("/user/login", { email, password });
+			console.log(data);
+			navigate("/");
 		} catch (error) {}
 	};
 	return (

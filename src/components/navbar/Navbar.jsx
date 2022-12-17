@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./navbar.css";
 
 import { BiSearch } from "react-icons/bi";
 import { GoThreeBars } from "react-icons/go";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 const Navbar = () => {
-	const {currentUser} = useSelector(state=>state.user)
+	// const { currentUser } = useSelector((state) => state.user);
 	const [isActive, setActive] = useState(false);
 	const toggleClass = () => {
 		setActive(!isActive);
@@ -17,6 +17,15 @@ const Navbar = () => {
 	const toggleSearchClass = () => {
 		setSearchActive(!isSearchActive);
 	};
+
+	const navigate = useNavigate();
+	const [search, setSearch] = useState("");
+	const handleSubmit = (e) => {
+		if (e.key === "Enter") {
+			navigate(`/search?q=${search}`);
+		}
+	};
+
 	return (
 		<>
 			<nav className="row align-items-center fixed-top">
@@ -26,7 +35,7 @@ const Navbar = () => {
 					</Link>
 					<div className="nav-items d-lg-flex">
 						<div className="item">
-							<input className={isSearchActive ? "search-box d-block" : "search-box d-none"} placeholder="Search" />
+							<input className={isSearchActive ? "search-box d-block" : "search-box d-none"} placeholder="Search" onChange={(e) => setSearch(e.target.value)} onKeyPress={handleSubmit} />
 						</div>
 						<div className="item">
 							<div className="search-icon" onClick={toggleSearchClass}>

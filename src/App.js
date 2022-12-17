@@ -9,6 +9,7 @@ import Registration from "./pages/auth/Registration";
 import Post from "./pages/post/PostDetail";
 import PostForm from "./pages/post/PostForm";
 import PostByCategory from "./pages/post/PostByCategory";
+import SearchPage from "./pages/search/SearchPage";
 import ProfilePage from "./pages/profile/ProfilePage";
 import "./reset.css";
 
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="category">
             <Route path="test" element={<PostByCategory />} />
           </Route>
+          <Route path="search" element={<SearchPage />} />
           <Route path="profile" element={<ProfilePage />} />
         </Route>
       </Routes>

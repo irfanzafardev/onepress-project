@@ -17,11 +17,11 @@ section.post .post-header img {
 
 section.post .post-title h1 {
 	display: inline;
-	text-align: left;
 	font-family: "ESAllianz-Regular", sans-serif;
+	text-align: left;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 3.888888888888889rem;
+	font-size: 3rem;
 	line-height: 4.444444444444445rem;
 	letter-spacing: 0rem;
 }
@@ -31,12 +31,15 @@ section.post .post-detail {
 }
 section.post .post-detail h3 {
 	display: inline;
+	margin-top: 2em;
+	margin-bottom: -0.46em;
 	text-align: left;
-	font-family: "ESAllianz-Regular", sans-serif;
-	font-weight: 400;
 	font-style: normal;
-	font-size: 1.2rem;
-	letter-spacing: 0rem;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: -0.003em;
+	color: rgba(41, 41, 41, 1);
 }
 
 section.post .post-detail span {
@@ -56,11 +59,15 @@ section.post .post-body {
 
 section.post .post-body p {
 	display: inline;
+	margin-top: 2em;
+	margin-bottom: -0.46em;
 	text-align: left;
 	font-style: normal;
-	font-size: 1.7rem;
-	line-height: 2.1rem;
-	letter-spacing: 0rem;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 32px;
+	letter-spacing: -0.003em;
+	color: rgba(41, 41, 41, 1);
 }
 
 section.post .author-img {

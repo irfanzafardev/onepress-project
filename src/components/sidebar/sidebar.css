@@ -31,10 +31,21 @@ section.sidebar .author-desc {
 }
 
 section.sidebar .author-desc h4 {
+	font-family: "ESAllianz-Regular", sans-serif;
+	margin-top: 5px;
 	text-align: center;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #000;
 }
 
 section.sidebar .author-desc p {
-	text-align: justify;
+	font-family: "ESAllianz-Regular", sans-serif;
 	margin-top: 5px;
+	text-align: justify;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+	color: rgba(117, 117, 117, 1);
 }
