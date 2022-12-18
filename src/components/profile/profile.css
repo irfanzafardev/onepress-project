@@ -19,23 +19,43 @@ section.profile .profile-form {
 	flex-direction: column;
 }
 
+section.profile .profile-form label {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-size: 17px !important;
+}
+
 section.profile .profile-form .profile-pic {
 	display: flex;
 	align-items: center;
-	margin: 20px 0;
+	margin: 20px 0 0 0;
 }
 
 section.profile .profile-form .profile-pic img {
-	width: 80px;
-	height: 80px;
+	width: 120px;
+	height: 120px;
 	border-radius: 100%;
 	object-fit: cover;
 }
 
 section.profile .profile-form .profile-pic-btn {
-	align-items: center;
-	justify-content: start;
+	width: 120px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	border-radius: 0%;
+	text-align: center;
 	cursor: pointer;
+	border: 1px solid #000;
+}
+
+section.profile .profile-form .profile-pic-btn p {
+	height: 100%;
+	font-family: "ESAllianz-Regular", sans-serif;
+	justify-content: center;
+	display: flex;
+	text-align: center;
+	align-items: center;
+	font-size: 16px;
 }
 
 section.profile .profile-form .form-group {
@@ -44,7 +64,8 @@ section.profile .profile-form .form-group {
 
 section.profile .profile-form .form-group label {
 	display: block;
-	font-size: 20px;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-size: 17px;
 }
 
 section.profile .profile-form .form-group input {
@@ -71,4 +92,17 @@ section.profile .profile-form .form-group textarea {
 
 section.profile .profile-form .form-group textarea:focus {
 	outline: none;
+}
+
+section.profile .profile-form button {
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	border-radius: 0%;
+	font-family: "ESAllianz-Regular", sans-serif;
+	text-align: center;
+	cursor: pointer;
+	border: 1px solid #000;
 }

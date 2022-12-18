@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 import "./navbar.css";
 
 import { BiSearch } from "react-icons/bi";
 import { GoThreeBars } from "react-icons/go";
-// import { useSelector } from "react-redux";
 
 const Navbar = () => {
-	// const { currentUser } = useSelector((state) => state.user);
+	const { currentUser } = useSelector((state) => state.user);
 	const [isActive, setActive] = useState(false);
 	const toggleClass = () => {
 		setActive(!isActive);
@@ -63,25 +63,30 @@ const Navbar = () => {
 								</li>
 							</ul>
 						</div>
-						<div className="item">
-							<Link to="/profile" className="link">
-								Profile
-							</Link>
-						</div>
-						<div className="item-btn">
-							<Link to="/login" className="link">
-								<button type="button" className="btn btn-outline-dark">
-									Sign in
-								</button>
-							</Link>
-						</div>
-						<div className="item-btn ms-3">
-							<Link to="/post/create" className="link">
-								<button type="button" className="btn btn-outline-dark">
-									Create story
-								</button>
-							</Link>
-						</div>
+						{currentUser ? (
+							<>
+								<div className="item">
+									<Link to="/profile" className="link">
+										Profile
+									</Link>
+								</div>
+								<div className="item-btn ms-3">
+									<Link to="/post/create" className="link">
+										<button type="button" className="btn btn-outline-dark">
+											Create story
+										</button>
+									</Link>
+								</div>
+							</>
+						) : (
+							<div className="item-btn">
+								<Link to="/login" className="link">
+									<button type="button" className="btn btn-outline-dark">
+										Sign in
+									</button>
+								</Link>
+							</div>
+						)}
 					</div>
 					<div className="mobile-toggler d-lg-none ms-5">
 						<div data-bs-toggle="modal" data-bs-target="#naveModal">

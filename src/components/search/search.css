@@ -1,3 +1,17 @@
-section.search {
+section.search .container-fluid {
+	width: 100%;
+	padding-inline: 60px;
 	padding-top: 260px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section.search .heading h1 {
+	display: inline;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 3.888888888888889rem;
+	line-height: 4.444444444444445rem;
+	letter-spacing: 0rem;
 }

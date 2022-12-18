@@ -1,12 +1,20 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import "./header.css";
 
 const Header = () => {
+	const { currentUser } = useSelector((state) => state.user);
 	return (
 		<section className="header">
 			<div className="container-fluid">
 				<div className="heading">
-					<h1>Halo semua pengunjung situs, selamat datang di tempat para "artist" membagikan karya dan ceritanya.</h1>
+					{currentUser ? (
+						<h1>
+							Halo saudara <span>{currentUser.name}</span>!, selamat datang di tempat para "artist" membagikan karya dan ceritanya.
+						</h1>
+					) : (
+						<h1>Halo semua pengunjung situs, selamat datang di tempat para "artist" membagikan karya dan ceritanya.</h1>
+					)}
 				</div>
 				<div className="content row">
 					<div className="developer col-4">

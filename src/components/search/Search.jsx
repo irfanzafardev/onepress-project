@@ -6,7 +6,11 @@ const Search = () => {
 	const query = useLocation().search;
 	return (
 		<section className="search">
-			<div className="container-fuild">ini search component {query}</div>
+			<div className="container-fluid">
+				<div className="heading">
+					<h1>Search "{query}"</h1>
+				</div>
+			</div>
 		</section>
 	);
 };

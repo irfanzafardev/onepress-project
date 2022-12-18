@@ -1,7 +1,10 @@
 import React from "react";
 import "./profile.css";
 
+import { useSelector } from "react-redux";
+
 const Profile = () => {
+	const { currentUser } = useSelector((state) => state.user);
 	return (
 		<section className="profile">
 			<div className="container-fluid">
@@ -17,25 +20,25 @@ const Profile = () => {
 					</div>
 					<div className="form-group">
 						<label htmlFor="profilePicInput" className="profile-pic-btn">
-							Upload Image
+							<p>Upload Image</p>
 						</label>
 						<input type="file" id="profilePicInput" className="d-none" />
 					</div>
 					<div className="form-group">
 						<label>Name</label>
-						<input type="text" placeholder="Name" />
+						<input type="text" placeholder={currentUser.name} />
 					</div>
 					<div className="form-group">
 						<label>Username</label>
-						<input type="text" placeholder="Username" />
+						<input type="text" placeholder={currentUser.username} />
 					</div>
 					<div className="form-group">
 						<label>Email</label>
-						<input type="email" placeholder="Email" />
+						<input type="email" placeholder={currentUser.email} />
 					</div>
 					<div className="form-group">
 						<label>Description</label>
-						<textarea type="text" placeholder="Description"></textarea>
+						<textarea type="text" placeholder={currentUser.description}></textarea>
 					</div>
 					<button type="button" className="btn btn-outline-dark">
 						Update

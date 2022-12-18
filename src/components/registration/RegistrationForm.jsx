@@ -1,8 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import axios from "axios";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./registration.css";
 
 const RegistrationForm = () => {
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [username, setUsername] = useState("");
+	const [password, setPassword] = useState("");
+
+	const navigate = useNavigate();
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		try {
+			const res = await axios.post("/user/register", {
+				name,
+				email,
+				username,
+				password,
+			});
+			console.log(res);
+			navigate("/login");
+		} catch (error) {
+			console.log(error);
+		}
+	};
 	return (
 		<>
 			<nav className="row align-items-center fixed-top">
@@ -23,27 +45,27 @@ const RegistrationForm = () => {
 					</div>
 				</div>
 			</nav>
-			<div class="login-box">
+			<div className="login-box">
 				<h2>Registration</h2>
-				<form>
-					<div class="user-box">
-						<input type="text" name="" required=""></input>
+				<form onSubmit={handleSubmit}>
+					<div className="user-box">
+						<input type="text" name="" required onChange={(e) => setName(e.target.value)}></input>
+						<label>Name</label>
+					</div>
+					<div className="user-box">
+						<input type="text" name="" required onChange={(e) => setUsername(e.target.value)}></input>
 						<label>Username</label>
 					</div>
-					<div class="user-box">
-						<input type="text" name="" required=""></input>
+					<div className="user-box">
+						<input type="text" name="" required onChange={(e) => setEmail(e.target.value)}></input>
 						<label>Email</label>
 					</div>
-					<div class="user-box">
-						<input type="password" name="" required=""></input>
+					<div className="user-box">
+						<input type="password" name="" required onChange={(e) => setPassword(e.target.value)}></input>
 						<label>Password</label>
 					</div>
-					<div class="user-box">
-						<input type="password" name="" required=""></input>
-						<label>Confirm Password</label>
-					</div>
 					<div className="item-btn float-end">
-						<button type="button" className="btn btn-outline-dark">
+						<button type="submit" className="btn btn-outline-dark">
 							Sign Up
 						</button>
 					</div>

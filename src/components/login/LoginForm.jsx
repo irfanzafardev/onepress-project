@@ -1,21 +1,27 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
+import { loginFailure, loginStart, loginSuccess } from "../../redux/userSlice";
 import "./login.css";
 
 const LoginForm = () => {
-	const [username, setUsername] = useState("");
+	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const navigate = useNavigate();
+	const dispatch = useDispatch();
 
 	const handleLogin = async (event) => {
-		console.log(event);
 		event.preventDefault();
+		dispatch(loginStart());
 		try {
-			const { data } = await axios.post("/user/login", { username, password });
-			console.log(data);
+			const { data } = await axios.post("/user/login", { email, password });
+			dispatch(loginSuccess(data));
 			navigate("/");
-		} catch (error) {}
+		} catch (error) {
+			console.log(error);
+			dispatch(loginFailure());
+		}
 	};
 	return (
 		<>
@@ -37,14 +43,14 @@ const LoginForm = () => {
 					</div>
 				</div>
 			</nav>
-			<div class="login-box">
+			<div className="login-box">
 				<h2>Log in</h2>
 				<form>
-					<div class="user-box">
-						<input type="text" onChange={(e) => setUsername(e.target.value)} required></input>
-						<label>Username</label>
+					<div className="user-box">
+						<input type="text" onChange={(e) => setEmail(e.target.value)} required></input>
+						<label>Email</label>
 					</div>
-					<div class="user-box">
+					<div className="user-box">
 						<input type="password" onChange={(e) => setPassword(e.target.value)} required></input>
 						<label>Password</label>
 					</div>
