@@ -23,6 +23,17 @@ section.header .container-fluid h1 {
 	text-indent: calc(100% / 12 * 4);
 }
 
+section.header .container-fluid h1 span {
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	font-size: 4.1rem;
+	line-height: 6rem;
+	letter-spacing: 0em;
+	text-align: left;
+	text-decoration: underline;
+}
+
 @media (max-width: 768px) {
 	section.header .container-fluid h1 {
 		text-indent: calc(100% / 12 * 0);

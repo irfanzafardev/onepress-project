@@ -6,7 +6,7 @@ import { loginFailure, loginStart, loginSuccess } from "../../redux/userSlice";
 import "./login.css";
 
 const LoginForm = () => {
-	const [email, setEmail] = useState("");
+	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const LoginForm = () => {
 		event.preventDefault();
 		dispatch(loginStart());
 		try {
-			const { data } = await axios.post("/user/login", { email, password });
+			const { data } = await axios.post("/user/login", { username, password });
 			dispatch(loginSuccess(data));
 			navigate("/");
 		} catch (error) {
@@ -47,8 +47,8 @@ const LoginForm = () => {
 				<h2>Log in</h2>
 				<form>
 					<div className="user-box">
-						<input type="text" onChange={(e) => setEmail(e.target.value)} required></input>
-						<label>Email</label>
+						<input type="text" onChange={(e) => setUsername(e.target.value)} required></input>
+						<label>Username</label>
 					</div>
 					<div className="user-box">
 						<input type="password" onChange={(e) => setPassword(e.target.value)} required></input>
