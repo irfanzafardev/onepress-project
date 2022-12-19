@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/userSlice";
 import "./navbar.css";
 
 import { BiSearch } from "react-icons/bi";
@@ -24,6 +25,13 @@ const Navbar = () => {
 		if (e.key === "Enter") {
 			navigate(`/search?q=${search}`);
 		}
+	};
+
+	const dispatch = useDispatch();
+	const handleLogout = async (e) => {
+		e.preventDefault();
+		dispatch(logout());
+		navigate("/");
 	};
 
 	return (
@@ -76,6 +84,11 @@ const Navbar = () => {
 											Create story
 										</button>
 									</Link>
+								</div>
+								<div className="item-btn ms-3">
+									<button type="button" className="btn btn-outline-dark" onClick={handleLogout}>
+										Log out
+									</button>
 								</div>
 							</>
 						) : (
