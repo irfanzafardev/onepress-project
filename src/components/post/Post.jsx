@@ -1,8 +1,25 @@
-import React from "react";
+// import axios from "axios";
+// import React, { useEffect, useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { useLocation } from "react-router-dom";
 import Comments from "../comment/Comments";
 import "./post.css";
 
 const Post = () => {
+	// const { currentUser } = useSelector((state) => state.user);
+	// const dispatch = useDispatch();
+
+	// const path = useLocation().pathname.split("/")[2];
+	// const [post, setPost] = useState({});
+	// const [author, setAuthor] = useState({});
+
+	// useEffect(() => {
+	// 	const fetchData = async () => {
+	// 		try {
+	// 			const videoRes = await axios.get("/posts/");
+	// 		} catch (error) {}
+	// 	};
+	// });
 	return (
 		<section className="post">
 			<div className="container-fluid">

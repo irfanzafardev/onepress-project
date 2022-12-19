@@ -10,8 +10,8 @@ const Landing = () => {
 
 	useEffect(() => {
 		const fetchPosts = async () => {
-			const res = await axios.get("");
-			setPosts(res.data);
+			const { data } = await axios.get("/posts");
+			setPosts(data);
 		};
 		fetchPosts();
 	});
