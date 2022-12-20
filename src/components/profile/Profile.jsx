@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./profile.css";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import app from "../../firebase";
+
+import { updateSuccess } from "../../redux/userSlice";
 
 const Profile = () => {
 	const { currentUser } = useSelector((state) => state.user);
@@ -25,10 +27,8 @@ const Profile = () => {
 	const [img, setImg] = useState(undefined);
 	const [imgPerc, setImgPerc] = useState(0);
 	const [inputs, setInputs] = useState(0);
-	// const [name, setName] = useState("");
-	// const [username, setUsername] = useState("");
-	// const [email, setEmail] = useState("");
-	// const [about, setAbout] = useState("");
+
+	const dispatch = useDispatch();
 
 	const handleChange = (e) => {
 		setInputs((prev) => {
@@ -73,12 +73,14 @@ const Profile = () => {
 	};
 
 	useEffect(() => {
-		img && uploadFile(img, "imgUrl");
+		img && uploadFile(img, "image");
 	}, [img]);
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		const res = await axios.put(`/user/profil/edit/${currentUser.userId}`, { inputs });
+		const res = await axios.put(`/user/profil/edit/${currentUser.userId}`, inputs);
+		// dispatch(updateSuccess(res));
+		console.log(res.data);
 		res.status === 200 && alert("upload sukses");
 	};
 
