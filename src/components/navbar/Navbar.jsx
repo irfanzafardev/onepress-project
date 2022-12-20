@@ -28,16 +28,16 @@ const Navbar = () => {
 		}
 	};
 
-	const [categories, setCategories] = useState([]);
-	useEffect(() => {
-		const fetchCategories = async () => {
-			try {
-				const { data } = await axios.get("/categories");
-				setCategories(data);
-			} catch (err) {}
-		};
-		fetchCategories();
-	}, []);
+	// const [categories, setCategories] = useState([]);
+	// useEffect(() => {
+	// 	const fetchCategories = async () => {
+	// 		try {
+	// 			const { data } = await axios.get("/categories");
+	// 			setCategories(data);
+	// 		} catch (err) {}
+	// 	};
+	// 	fetchCategories();
+	// }, []);
 
 	const dispatch = useDispatch();
 	const handleLogout = async (e) => {
@@ -70,13 +70,13 @@ const Navbar = () => {
 						<div className="item">
 							<span onClick={toggleClass}>Categories</span>
 							<ul className={isActive ? "nav-dropdown d-block" : "nav-dropdown d-none"}>
-								{categories.map((item) => (
+								{/* {categories.map((item) => (
 									<li key={item.id}>
 										<Link to={`/category/${item.data}`} className="link">
 											<div className="dropdown-item">{item.data}</div>
 										</Link>
 									</li>
-								))}
+								))} */}
 							</ul>
 						</div>
 						{currentUser ? (
