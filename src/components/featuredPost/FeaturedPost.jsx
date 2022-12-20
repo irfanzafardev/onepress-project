@@ -1,11 +1,20 @@
-import React from "react";
+// import React, { useEffect, useState } from "react";
 import "./featuredpost.css";
-// import Posts from "../posts/Posts";
 
 import { BsArrowDownShort } from "react-icons/bs";
 import { Link } from "react-router-dom";
+// import axios from "axios";
 
-const FeaturedPost = ({ posts }) => {
+const FeaturedPost = () => {
+	// const [posts, setPosts] = useState([]);
+
+	// useEffect(() => {
+	// 	const fetchPosts = async () => {
+	// 		const { data } = await axios.get("/posts");
+	// 		setPosts(data);
+	// 	};
+	// 	fetchPosts();
+	// }, []);
 	return (
 		<section className="featured-post">
 			<div className="container-fluid">
