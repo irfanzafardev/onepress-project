@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/userSlice";
@@ -6,6 +6,7 @@ import "./navbar.css";
 
 import { BiSearch } from "react-icons/bi";
 import { GoThreeBars } from "react-icons/go";
+import axios from "axios";
 
 const Navbar = () => {
 	const { currentUser } = useSelector((state) => state.user);
@@ -26,6 +27,17 @@ const Navbar = () => {
 			navigate(`/search?q=${search}`);
 		}
 	};
+
+	const [categories, setCategories] = useState([]);
+	useEffect(() => {
+		const fetchCategories = async () => {
+			try {
+				const { data } = await axios.get("/categories");
+				setCategories(data);
+			} catch (err) {}
+		};
+		fetchCategories();
+	}, []);
 
 	const dispatch = useDispatch();
 	const handleLogout = async (e) => {
@@ -58,23 +70,20 @@ const Navbar = () => {
 						<div className="item">
 							<span onClick={toggleClass}>Categories</span>
 							<ul className={isActive ? "nav-dropdown d-block" : "nav-dropdown d-none"}>
-								<li>
-									<Link to="/category/test" className="link">
-										<div className="dropdown-item">Category item</div>
-									</Link>
-								</li>
-								<li>
-									<div className="dropdown-item">Category item</div>
-								</li>
-								<li>
-									<div className="dropdown-item">Category item</div>
-								</li>
+								{categories.map((item) => (
+									<li key={item.id}>
+										<Link to={`/category/${item.data}`} className="link">
+											<div className="dropdown-item">{item.data}</div>
+										</Link>
+									</li>
+								))}
 							</ul>
 						</div>
 						{currentUser ? (
 							<>
 								<div className="item">
-									<Link to="/profile" className="link">
+									{/* <Link to={`/profile/${currentUser.name}`} className="link"> */}
+									<Link to={`/profile`} className="link">
 										Profile
 									</Link>
 								</div>
@@ -126,11 +135,34 @@ const Navbar = () => {
 							<div className="modal-line">
 								<div className="modal-item">Profile</div>
 							</div>
-							<div className="modal-btn">
-								<button type="button" className="btn btn-outline-dark">
-									Sign in
-								</button>
-							</div>
+							{currentUser ? (
+								<>
+									<div className="modal-btn">
+										<div className="item-btn">
+											<Link to="/post/create" className="link">
+												<button type="button" className="btn btn-outline-dark" data-bs-dismiss="modal" aria-label="Close">
+													Create story
+												</button>
+											</Link>
+										</div>
+									</div>
+									<div className="modal-btn mt-2">
+										<div className="item-btn">
+											<button type="button" className="btn btn-outline-dark" onClick={handleLogout}>
+												Log out
+											</button>
+										</div>
+									</div>
+								</>
+							) : (
+								<div className="modal-btn">
+									<Link to="/login" className="link">
+										<button type="button" className="btn btn-outline-dark" data-bs-dismiss="modal" aria-label="Close">
+											Sign in
+										</button>
+									</Link>
+								</div>
+							)}
 						</div>
 						{/* <div className="modal-footer"></div> */}
 					</div>

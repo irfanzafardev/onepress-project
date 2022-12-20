@@ -34,7 +34,7 @@ const RegistrationForm = () => {
 							ONEPRESS
 						</Link>
 					</div>
-					<div className="nav-items d-lg-flex">
+					<div className="nav-items d-flex">
 						<div className="item-btn">
 							<Link to="/login" className="link">
 								<button type="button" className="btn btn-outline-dark">

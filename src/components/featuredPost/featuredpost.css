@@ -1,11 +1,11 @@
-section .container-fluid.featured-post {
+section.featured-post .container-fluid {
 	width: 100%;
 	padding: 30px 60px 0 60px;
 	align-items: center;
 	justify-content: space-between;
 }
 
-section .container-fluid.featured-post .heading h1 {
+section.featured-post .container-fluid .heading h1 {
 	display: inline;
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 400;
@@ -15,27 +15,27 @@ section .container-fluid.featured-post .heading h1 {
 	letter-spacing: 0rem;
 }
 
-section .container-fluid.featured-post .heading .icon {
+section.featured-post .container-fluid .heading .icon {
 	margin: -30px 0 0 0;
 	padding: 0;
 }
 
-section .container-fluid.featured-post .card {
+section.featured-post .container-fluid .card {
 	border: none;
 }
 
-section .container-fluid.featured-post .card .card-body {
+section.featured-post .container-fluid .card .card-body {
 	margin: 0;
 	padding: 0;
 }
 
-section .container-fluid.featured-post .card img {
+section.featured-post .container-fluid .card img {
 	width: 100%;
 	border-radius: 0;
 	object-fit: cover;
 }
 
-section .container-fluid.featured-post .card p {
+section.featured-post .container-fluid .card p {
 	padding-top: 10px;
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 400;
@@ -45,11 +45,11 @@ section .container-fluid.featured-post .card p {
 	letter-spacing: 0rem;
 }
 
-section .container-fluid.featured-post .featured {
+section.featured-post .container-fluid .featured {
 	margin-top: 60px;
 }
 
-section .container-fluid.featured-post .featured h2 {
+section.featured-post .container-fluid .featured h2 {
 	padding-bottom: 20px;
 	font-family: "ESAllianz-Regular", sans-serif;
 	font-weight: 400;
@@ -59,7 +59,7 @@ section .container-fluid.featured-post .featured h2 {
 	letter-spacing: 0rem;
 }
 
-section .container-fluid.featured-post .featured img {
+section.featured-post .container-fluid .featured img {
 	width: 100%;
 	height: 500px;
 	border-radius: 0;

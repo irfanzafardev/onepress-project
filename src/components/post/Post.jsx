@@ -16,7 +16,7 @@ const Post = () => {
 	// useEffect(() => {
 	// 	const fetchData = async () => {
 	// 		try {
-	// 			const videoRes = await axios.get("/posts/");
+	// 			const postRes = await axios.get("/posts/");
 	// 		} catch (error) {}
 	// 	};
 	// });

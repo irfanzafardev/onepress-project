@@ -10,10 +10,10 @@ const PostDetail = () => {
 		<>
 			<Navbar />
 			<div className="content row">
-				<div className="col-9">
+				<div className="col-12 col-lg-9">
 					<Post />
 				</div>
-				<div className="col-3">
+				<div className="col-3 d-none d-lg-block">
 					<Sidebar />
 				</div>
 			</div>

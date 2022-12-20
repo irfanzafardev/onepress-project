@@ -1,13 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./category.css";
 
 const Category = () => {
+	const path = useLocation().pathname.split("/")[2];
+
 	return (
 		<section className="category">
 			<div className="container-fluid featured-post">
 				<div className="heading">
-					<h1>Category item</h1>
+					<h1>Category "{path}"</h1>
 				</div>
 				<div className="row featured">
 					<div className="col-6">

@@ -17,7 +17,7 @@ const Header = () => {
 					)}
 				</div>
 				<div className="content row">
-					<div className="developer col-4">
+					<div className="developer col-6 col-lg-4">
 						<p>DEVS-</p>
 						<span>
 							Irfan Zafar
@@ -27,11 +27,11 @@ const Header = () => {
 							Dhiya Ulhaq
 						</span>
 					</div>
-					<div className="location col-4">
+					<div className="location col-6 col-lg-4">
 						<p>LOCATION-</p>
 						<span>Jakarta, ID</span>
 					</div>
-					<div className="email col-4">
+					<div className="email col-6 col-lg-4">
 						<p>GET IN TOUCH-</p>
 						<span>hello@mail.com</span>
 					</div>

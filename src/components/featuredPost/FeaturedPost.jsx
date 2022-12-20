@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const FeaturedPost = ({ posts }) => {
 	return (
-		<section>
-			<div className="container-fluid featured-post">
+		<section className="featured-post">
+			<div className="container-fluid">
 				<div className="heading">
 					<h1>Latest Update</h1>
 					<BsArrowDownShort className="icon" size="6rem" />
@@ -32,7 +32,7 @@ const FeaturedPost = ({ posts }) => {
 					{/* {posts.map((p) => (
 						<Posts post={p} />
 					))} */}
-					<div className="col-6">
+					<div className="col-12 col-lg-6">
 						<Link to={`/post/test`} className="link">
 							<div className="card">
 								<img src="https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="card-img-top" alt="..."></img>
@@ -42,7 +42,7 @@ const FeaturedPost = ({ posts }) => {
 							</div>
 						</Link>
 					</div>
-					<div className="col-6">
+					<div className="col-12 col-lg-6">
 						<Link to={`/post/test`} className="link">
 							<div className="card">
 								<img src="https://images.pexels.com/photos/383568/pexels-photo-383568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="card-img-top" alt="..."></img>

@@ -27,10 +27,13 @@ const App = () => {
             <Route path="create" element={<PostForm />} />
           </Route>
           <Route path="category">
-            <Route path="test" element={<PostByCategory />} />
+            <Route path=":category" element={<PostByCategory />} />
           </Route>
           <Route path="search" element={<SearchPage />} />
           <Route path="profile" element={<ProfilePage />} />
+          {/* <Route path="profile">
+            <Route path=":name" element={<ProfilePage />} />
+          </Route> */}
         </Route>
       </Routes>
     </BrowserRouter>

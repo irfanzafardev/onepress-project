@@ -16,12 +16,12 @@ const Footer = () => {
 					</div>
 				</div>
 				<div className="row footer-information">
-					<div className="col-3">
+					<div className="col-6 col-lg-3">
 						<ul>
 							<li>hello@mail.com</li>
 						</ul>
 					</div>
-					<div className="col-3">
+					<div className="col-6 col-lg-3">
 						<ul>
 							<li>
 								<a href="https://github.com/irfanzafardev/onepress-project" target="_blank" rel="noreferrer">
@@ -33,7 +33,7 @@ const Footer = () => {
 							</li>
 						</ul>
 					</div>
-					<div className="col-3">
+					<div className="col-6 col-lg-3">
 						<ul>
 							<li>
 								<a href="https://github.com/irfanzafardev/onepress-project" target="_blank" rel="noreferrer">
@@ -45,7 +45,7 @@ const Footer = () => {
 							</li>
 						</ul>
 					</div>
-					<div className="col-3">
+					<div className="col-6 col-lg-3">
 						<ul>
 							<li>
 								<a href="https://github.com/irfanzafardev/onepress-project" target="_blank" rel="noreferrer">

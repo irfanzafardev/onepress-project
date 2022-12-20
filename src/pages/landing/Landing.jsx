@@ -14,7 +14,7 @@ const Landing = () => {
 			setPosts(data);
 		};
 		fetchPosts();
-	});
+	}, []);
 	return (
 		<>
 			<Navbar />
