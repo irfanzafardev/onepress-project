@@ -18,7 +18,6 @@ const Category = () => {
 		};
 		fetchPosts();
 	}, [query]);
-	console.log("postnya adalah", posts);
 	return (
 		<section className="category">
 			<div className="container-fluid featured-post">

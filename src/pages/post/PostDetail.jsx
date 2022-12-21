@@ -17,7 +17,6 @@ const PostDetail = () => {
 		const getPost = async () => {
 			const { data } = await axios.get(rootAPI + "/posts/" + path);
 			setPost(data);
-			console.log(data);
 		};
 		getPost();
 	}, [path]);

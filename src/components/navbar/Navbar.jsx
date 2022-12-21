@@ -35,7 +35,6 @@ const Navbar = () => {
 	const fetchCategories = async () => {
 		const { data } = await axios.get(rootAPI + "/categories");
 		setCategories(data);
-		console.log(data);
 	};
 	useEffect(() => {
 		fetchCategories();
