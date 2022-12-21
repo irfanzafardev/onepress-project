@@ -83,7 +83,7 @@ const Profile = () => {
 		const res = await axios.put(rootAPI + `/user/profil/edit/${currentUser.userId}`, inputs);
 		// dispatch(updateSuccess(res));
 		console.log(res.data);
-		res.status === 200 && alert("upload sukses");
+		window.location.reload();
 	};
 
 	return (
