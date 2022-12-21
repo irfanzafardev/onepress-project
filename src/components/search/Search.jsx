@@ -8,6 +8,8 @@ const rootAPI = "https://one-press-blog-server.vercel.app";
 
 const Search = () => {
 	const query = useLocation().search;
+	const path = useLocation().search.substring(query.indexOf("=") + 1);
+
 	const [posts, setPosts] = useState([]);
 	useEffect(() => {
 		const fetchPosts = async () => {
@@ -19,12 +21,20 @@ const Search = () => {
 	return (
 		<section className="search">
 			<div className="container-fluid">
-				<div className="heading">
-					<h1>Search "{query}"</h1>
+				<div className="heading mb-5">
+					<h1>Search for "{path}"</h1>
 				</div>
-				{posts.map((post) => (
-					<Posts post={post} key={post._id} />
-				))}
+				<div className="row featured">
+					{posts ? (
+						<div>
+							{posts.map((post) => (
+								<Posts post={post} key={post._id} />
+							))}
+						</div>
+					) : (
+						<p>No posts found</p>
+					)}
+				</div>
 			</div>
 		</section>
 	);

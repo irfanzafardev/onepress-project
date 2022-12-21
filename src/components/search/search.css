@@ -15,3 +15,28 @@ section.search .heading h1 {
 	line-height: 4.444444444444445rem;
 	letter-spacing: 0rem;
 }
+
+section.search .featured .card {
+	border: none;
+}
+
+section.search .featured .card .card-body {
+	margin: 0;
+	padding: 0;
+}
+
+section.search .featured .card img {
+	width: 100%;
+	border-radius: 0;
+	object-fit: cover;
+}
+
+section.search .featured .card p {
+	padding-top: 10px;
+	font-family: "ESAllianz-Regular", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 1.4rem;
+	line-height: 1.2777777777778;
+	letter-spacing: 0rem;
+}
