@@ -4,12 +4,14 @@ import { useLocation } from "react-router-dom";
 import "./search.css";
 import Posts from "../../components/posts/Posts";
 
+const rootAPI = "https://one-press-blog-server.vercel.app";
+
 const Search = () => {
 	const query = useLocation().search;
 	const [posts, setPosts] = useState([]);
 	useEffect(() => {
 		const fetchPosts = async () => {
-			const { data } = await axios.get(`/search${query}`);
+			const { data } = await axios.get(rootAPI + `/search${query}`);
 			setPosts(data);
 		};
 		fetchPosts();
@@ -20,8 +22,8 @@ const Search = () => {
 				<div className="heading">
 					<h1>Search "{query}"</h1>
 				</div>
-				{posts.map((p) => (
-					<Posts post={p} />
+				{posts.map((post) => (
+					<Posts post={post} key={post._id} />
 				))}
 			</div>
 		</section>

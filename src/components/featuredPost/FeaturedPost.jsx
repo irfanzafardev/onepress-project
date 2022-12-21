@@ -8,15 +8,23 @@ import axios from "axios";
 
 const FeaturedPost = () => {
 	const [posts, setPosts] = useState([]);
+	const [latestPosts, setLatestPosts] = useState([]);
 
 	const rootAPI = "https://one-press-blog-server.vercel.app";
+
 	const fetchPosts = async () => {
 		const { data } = await axios.get(rootAPI + "/posts");
 		setPosts(data);
 	};
 
+	const fetchLatestPosts = async () => {
+		const { data } = await axios.get(rootAPI + "/posts/latest");
+		setLatestPosts(data);
+	};
+
 	useEffect(() => {
 		fetchPosts();
+		fetchLatestPosts();
 	}, []);
 	return (
 		<section className="featured-post">
@@ -26,23 +34,25 @@ const FeaturedPost = () => {
 					<BsArrowDownShort className="icon" size="6rem" />
 				</div>
 				<div className="row latest-update">
-					<div className="col-12">
-						<Link to="/post/test" className="link">
-							<div className="card">
-								<img src="https://images.pexels.com/photos/1109354/pexels-photo-1109354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="card-img-top" alt="..."></img>
-								<div className="card-body">
-									<p className="card-text">Post title</p>
+					{latestPosts.map((latestPost) => (
+						<div className="col-12" key={latestPost._id}>
+							<Link to={`/post/${latestPost._id}`} className="link">
+								<div className="card">
+									<img src={latestPost.photo} className="card-img-top" alt="..."></img>
+									<div className="card-body">
+										<p className="card-text">{latestPost.title}</p>
+									</div>
 								</div>
-							</div>
-						</Link>
-					</div>
+							</Link>
+						</div>
+					))}
 				</div>
 				<div className="row featured">
 					<div className="heading">
 						<h2>Featured</h2>
 					</div>
 					{posts.map((post) => (
-						<Posts post={post} />
+						<Posts post={post} key={post._id} />
 					))}
 				</div>
 			</div>

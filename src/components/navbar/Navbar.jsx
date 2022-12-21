@@ -30,10 +30,12 @@ const Navbar = () => {
 	};
 
 	const [categories, setCategories] = useState([]);
+
 	const rootAPI = "https://one-press-blog-server.vercel.app";
 	const fetchCategories = async () => {
 		const { data } = await axios.get(rootAPI + "/categories");
 		setCategories(data);
+		console.log(data);
 	};
 	useEffect(() => {
 		fetchCategories();
@@ -51,7 +53,7 @@ const Navbar = () => {
 			<nav className="row align-items-center fixed-top">
 				<div className="container-fluid">
 					<Link to="/" className="link">
-						<div className="nav-brand">ONEPRESS (Deployed)</div>
+						<div className="nav-brand">ONEPRESS</div>
 					</Link>
 					<div className="nav-items d-lg-flex">
 						<div className="item">

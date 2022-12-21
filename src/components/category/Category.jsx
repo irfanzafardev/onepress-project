@@ -6,10 +6,14 @@ import Posts from "../../components/posts/Posts";
 
 const Category = () => {
 	const query = useLocation().search;
+	const path = useLocation().search.substring(query.indexOf("=") + 1);
 	const [posts, setPosts] = useState([]);
+
+	const rootAPI = "https://one-press-blog-server.vercel.app";
+
 	useEffect(() => {
 		const fetchPosts = async () => {
-			const { data } = await axios.get(`/posts${query}`);
+			const { data } = await axios.get(rootAPI + `/posts${query}`);
 			setPosts(data);
 		};
 		fetchPosts();
@@ -19,13 +23,13 @@ const Category = () => {
 		<section className="category">
 			<div className="container-fluid featured-post">
 				<div className="heading">
-					<h1>Category for "{query}"</h1>
+					<h1>Category for "{path}"</h1>
 				</div>
 				<div className="row featured">
 					{posts ? (
 						<div>
-							{posts.map((p) => (
-								<Posts post={p} />
+							{posts.map((post) => (
+								<Posts post={post} key={post._id} />
 							))}
 						</div>
 					) : (
