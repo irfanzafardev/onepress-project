@@ -9,11 +9,13 @@ const RegistrationForm = () => {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
+	const rootAPI = "https://one-press-blog-server.vercel.app";
+
 	const navigate = useNavigate();
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const res = await axios.post("/user/register", {
+			const res = await axios.post(rootAPI + "/user/register", {
 				name,
 				email,
 				username,
