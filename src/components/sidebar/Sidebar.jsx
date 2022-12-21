@@ -1,7 +1,7 @@
 import React from "react";
 import "./sidebar.css";
 
-const Sidebar = () => {
+const Sidebar = ({ post }) => {
 	return (
 		<section className="sidebar">
 			<div className="sidebar-content">
@@ -10,10 +10,10 @@ const Sidebar = () => {
 						<h4>About</h4>
 					</div>
 					<div className="author-img">
-						<img src="https://images.pexels.com/photos/2387335/pexels-photo-2387335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
+						<img src="https://cdn-icons-png.flaticon.com/512/1144/1144760.png" alt="" />
 					</div>
 					<div className="author-desc">
-						<h4>Author name</h4>
+						<h4>{post.username}</h4>
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, nobis! Distinctio doloribus in culpa exercitationem</p>
 					</div>
 				</div>
