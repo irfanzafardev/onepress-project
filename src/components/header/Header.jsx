@@ -6,9 +6,11 @@ import "./header.css";
 
 const Header = () => {
 	const { currentUser } = useSelector((state) => state.user);
+
+	const rootAPI = "https://one-press-blog-server.vercel.app";
 	const [categories, setCategories] = useState([]);
 	const fetchCategories = async () => {
-		const { data } = await axios.get("https://one-press-blog-server.vercel.app/categories");
+		const { data } = await axios.get(rootAPI + "/categories");
 		setCategories(data);
 	};
 	useEffect(() => {

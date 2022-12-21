@@ -30,13 +30,12 @@ const Navbar = () => {
 	};
 
 	const [categories, setCategories] = useState([]);
+	const rootAPI = "https://one-press-blog-server.vercel.app";
+	const fetchCategories = async () => {
+		const { data } = await axios.get(rootAPI + "/categories");
+		setCategories(data);
+	};
 	useEffect(() => {
-		const fetchCategories = async () => {
-			try {
-				const { data } = await axios.get("/categories");
-				setCategories(data);
-			} catch (err) {}
-		};
 		fetchCategories();
 	}, []);
 
@@ -68,7 +67,7 @@ const Navbar = () => {
 								Home
 							</Link>
 						</div>
-						{/* <div className="item">
+						<div className="item">
 							<span onClick={toggleClass}>Categories</span>
 							<ul className={isActive ? "nav-dropdown d-block" : "nav-dropdown d-none"}>
 								{categories.map((item) => (
@@ -79,7 +78,7 @@ const Navbar = () => {
 									</li>
 								))}
 							</ul>
-						</div> */}
+						</div>
 						{currentUser ? (
 							<>
 								<div className="item">

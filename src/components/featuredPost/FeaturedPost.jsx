@@ -9,11 +9,13 @@ import axios from "axios";
 const FeaturedPost = () => {
 	const [posts, setPosts] = useState([]);
 
+	const rootAPI = "https://one-press-blog-server.vercel.app";
+	const fetchPosts = async () => {
+		const { data } = await axios.get(rootAPI + "/posts");
+		setPosts(data);
+	};
+
 	useEffect(() => {
-		const fetchPosts = async () => {
-			const { data } = await axios.get("/posts");
-			setPosts(data);
-		};
 		fetchPosts();
 	}, []);
 	return (
@@ -39,9 +41,9 @@ const FeaturedPost = () => {
 					<div className="heading">
 						<h2>Featured</h2>
 					</div>
-					{/* {posts.map((p) => (
-						<Posts post={p} />
-					))} */}
+					{posts.map((post) => (
+						<Posts post={post} />
+					))}
 				</div>
 			</div>
 		</section>

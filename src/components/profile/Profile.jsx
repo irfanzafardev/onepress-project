@@ -14,10 +14,12 @@ const Profile = () => {
 	const { currentUser } = useSelector((state) => state.user);
 	const [user, setUser] = useState([]);
 
+	const rootAPI = "https://one-press-blog-server.vercel.app";
+
 	useEffect(() => {
 		const fetchUser = async () => {
 			try {
-				const { data } = await axios.get(`user/profil/${currentUser.userId}`);
+				const { data } = await axios.get(rootAPI + `/user/profil/${currentUser.userId}`);
 				setUser(data[0]);
 				console.log(currentUser);
 			} catch (err) {}

@@ -11,11 +11,13 @@ const LoginForm = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
+	const rootAPI = "https://one-press-blog-server.vercel.app";
+
 	const handleLogin = async (event) => {
 		event.preventDefault();
 		dispatch(loginStart());
 		try {
-			const { data } = await axios.post("/user/login", { username, password });
+			const { data } = await axios.post(rootAPI + "/user/login", { username, password });
 			dispatch(loginSuccess(data));
 			navigate("/");
 		} catch (error) {
