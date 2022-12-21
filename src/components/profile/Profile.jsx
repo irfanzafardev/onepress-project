@@ -80,7 +80,7 @@ const Profile = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		const res = await axios.put(`/user/profil/edit/${currentUser.userId}`, inputs);
+		const res = await axios.put(rootAPI + `/user/profil/edit/${currentUser.userId}`, inputs);
 		// dispatch(updateSuccess(res));
 		console.log(res.data);
 		res.status === 200 && alert("upload sukses");

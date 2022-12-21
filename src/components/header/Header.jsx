@@ -19,7 +19,7 @@ const Header = () => {
 	return (
 		<section className="header">
 			<div className="container-fluid">
-				<ul>
+				{/* <ul>
 					{categories.map((item) => (
 						<li key={item.id}>
 							<Link to={`/category?cat=${item.data}`} className="link">
@@ -27,7 +27,7 @@ const Header = () => {
 							</Link>
 						</li>
 					))}
-				</ul>
+				</ul> */}
 				<div className="heading">
 					{currentUser ? (
 						<h1>
