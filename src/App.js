@@ -26,9 +26,7 @@ const App = () => {
             <Route path="test" element={<Post />} />
             <Route path="create" element={<PostForm />} />
           </Route>
-          <Route path="category">
-            <Route path=":category" element={<PostByCategory />} />
-          </Route>
+          <Route path="category" element={<PostByCategory />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="profile" element={<ProfilePage />} />
           {/* <Route path="profile">

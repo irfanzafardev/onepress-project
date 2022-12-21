@@ -1,12 +1,31 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "./header.css";
 
 const Header = () => {
 	const { currentUser } = useSelector((state) => state.user);
+	const [categories, setCategories] = useState([]);
+	const fetchCategories = async () => {
+		const { data } = await axios.get("https://one-press-blog-server.vercel.app/categories");
+		setCategories(data);
+	};
+	useEffect(() => {
+		fetchCategories();
+	}, []);
 	return (
 		<section className="header">
 			<div className="container-fluid">
+				<ul>
+					{categories.map((item) => (
+						<li key={item.id}>
+							<Link to={`/category?cat=${item.data}`} className="link">
+								<div className="dropdown-item">{item.data}</div>
+							</Link>
+						</li>
+					))}
+				</ul>
 				<div className="heading">
 					{currentUser ? (
 						<h1>

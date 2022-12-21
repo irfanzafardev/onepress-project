@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./profile.css";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+// import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import app from "../../firebase";
 
-import { updateSuccess } from "../../redux/userSlice";
+// import { updateSuccess } from "../../redux/userSlice";
 
 const Profile = () => {
 	const { currentUser } = useSelector((state) => state.user);
@@ -18,21 +19,23 @@ const Profile = () => {
 			try {
 				const { data } = await axios.get(`user/profil/${currentUser.userId}`);
 				setUser(data[0]);
+				console.log(currentUser);
 			} catch (err) {}
 		};
 		fetchUser();
-	}, [currentUser.userId]);
+	}, [currentUser.userId, currentUser]);
 
 	// Edit form
 	const [img, setImg] = useState(undefined);
 	const [imgPerc, setImgPerc] = useState(0);
 	const [inputs, setInputs] = useState(0);
 
-	const dispatch = useDispatch();
+	// const dispatch = useDispatch();
 
 	const handleChange = (e) => {
+		const { name, value } = e.target;
 		setInputs((prev) => {
-			return { ...prev, [e.target.name]: e.target.value };
+			return { ...prev, [name]: value };
 		});
 	};
 
@@ -42,11 +45,9 @@ const Profile = () => {
 		const storageRef = ref(storage, fileName);
 		const uploadTask = uploadBytesResumable(storageRef, file);
 
-		// Listen for state changes, errors, and completion of the upload.
 		uploadTask.on(
 			"state_changed",
 			(snapshot) => {
-				// Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
 				const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
 				setImgPerc(progress);
 				switch (snapshot.state) {
@@ -62,7 +63,6 @@ const Profile = () => {
 			},
 			(error) => {},
 			() => {
-				// Upload completed successfully, now we can get the download URL
 				getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
 					setInputs((prev) => {
 						return { ...prev, [urlType]: downloadURL };

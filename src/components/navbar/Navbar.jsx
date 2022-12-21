@@ -21,23 +21,24 @@ const Navbar = () => {
 	};
 
 	const navigate = useNavigate();
+
 	const [search, setSearch] = useState("");
-	const handleSubmit = (e) => {
+	const handleSearch = (e) => {
 		if (e.key === "Enter") {
 			navigate(`/search?q=${search}`);
 		}
 	};
 
-	// const [categories, setCategories] = useState([]);
-	// useEffect(() => {
-	// 	const fetchCategories = async () => {
-	// 		try {
-	// 			const { data } = await axios.get("/categories");
-	// 			setCategories(data);
-	// 		} catch (err) {}
-	// 	};
-	// 	fetchCategories();
-	// }, []);
+	const [categories, setCategories] = useState([]);
+	useEffect(() => {
+		const fetchCategories = async () => {
+			try {
+				const { data } = await axios.get("/categories");
+				setCategories(data);
+			} catch (err) {}
+		};
+		fetchCategories();
+	}, []);
 
 	const dispatch = useDispatch();
 	const handleLogout = async (e) => {
@@ -55,7 +56,7 @@ const Navbar = () => {
 					</Link>
 					<div className="nav-items d-lg-flex">
 						<div className="item">
-							<input className={isSearchActive ? "search-box d-block" : "search-box d-none"} placeholder="Search" onChange={(e) => setSearch(e.target.value)} onKeyPress={handleSubmit} />
+							<input className={isSearchActive ? "search-box d-block" : "search-box d-none"} placeholder="Search" onChange={(e) => setSearch(e.target.value)} onKeyPress={handleSearch} />
 						</div>
 						<div className="item">
 							<div className="search-icon" onClick={toggleSearchClass}>
@@ -67,18 +68,18 @@ const Navbar = () => {
 								Home
 							</Link>
 						</div>
-						<div className="item">
+						{/* <div className="item">
 							<span onClick={toggleClass}>Categories</span>
 							<ul className={isActive ? "nav-dropdown d-block" : "nav-dropdown d-none"}>
-								{/* {categories.map((item) => (
+								{categories.map((item) => (
 									<li key={item.id}>
-										<Link to={`/category/${item.data}`} className="link">
+										<Link to={`/category?cat=${item.data}`} className="link">
 											<div className="dropdown-item">{item.data}</div>
 										</Link>
 									</li>
-								))} */}
+								))}
 							</ul>
-						</div>
+						</div> */}
 						{currentUser ? (
 							<>
 								<div className="item">

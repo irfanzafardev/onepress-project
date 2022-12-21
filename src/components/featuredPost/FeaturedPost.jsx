@@ -1,20 +1,21 @@
-// import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./featuredpost.css";
+import Posts from "../../components/posts/Posts";
 
 import { BsArrowDownShort } from "react-icons/bs";
 import { Link } from "react-router-dom";
-// import axios from "axios";
+import axios from "axios";
 
 const FeaturedPost = () => {
-	// const [posts, setPosts] = useState([]);
+	const [posts, setPosts] = useState([]);
 
-	// useEffect(() => {
-	// 	const fetchPosts = async () => {
-	// 		const { data } = await axios.get("/posts");
-	// 		setPosts(data);
-	// 	};
-	// 	fetchPosts();
-	// }, []);
+	useEffect(() => {
+		const fetchPosts = async () => {
+			const { data } = await axios.get("/posts");
+			setPosts(data);
+		};
+		fetchPosts();
+	}, []);
 	return (
 		<section className="featured-post">
 			<div className="container-fluid">
@@ -41,26 +42,6 @@ const FeaturedPost = () => {
 					{/* {posts.map((p) => (
 						<Posts post={p} />
 					))} */}
-					<div className="col-12 col-lg-6">
-						<Link to={`/post/test`} className="link">
-							<div className="card">
-								<img src="https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="card-img-top" alt="..."></img>
-								<div className="card-body">
-									<p className="card-text">Title</p>
-								</div>
-							</div>
-						</Link>
-					</div>
-					<div className="col-12 col-lg-6">
-						<Link to={`/post/test`} className="link">
-							<div className="card">
-								<img src="https://images.pexels.com/photos/383568/pexels-photo-383568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="card-img-top" alt="..."></img>
-								<div className="card-body">
-									<p className="card-text">Title</p>
-								</div>
-							</div>
-						</Link>
-					</div>
 				</div>
 			</div>
 		</section>

@@ -1,37 +1,36 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import "./category.css";
+import { useLocation } from "react-router-dom";
+import axios from "axios";
+import Posts from "../../components/posts/Posts";
 
 const Category = () => {
-	const path = useLocation().pathname.split("/")[2];
-
+	const query = useLocation().search;
+	const [posts, setPosts] = useState([]);
+	useEffect(() => {
+		const fetchPosts = async () => {
+			const { data } = await axios.get(`/posts${query}`);
+			setPosts(data);
+		};
+		fetchPosts();
+	}, [query]);
+	console.log("postnya adalah", posts);
 	return (
 		<section className="category">
 			<div className="container-fluid featured-post">
 				<div className="heading">
-					<h1>Category "{path}"</h1>
+					<h1>Category for "{query}"</h1>
 				</div>
 				<div className="row featured">
-					<div className="col-6">
-						<Link to={`/post/test`} className="link">
-							<div className="card">
-								<img src="https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="card-img-top" alt="..."></img>
-								<div className="card-body">
-									<p className="card-text">Title</p>
-								</div>
-							</div>
-						</Link>
-					</div>
-					<div className="col-6">
-						<Link to={`/post/test`} className="link">
-							<div className="card">
-								<img src="https://images.pexels.com/photos/383568/pexels-photo-383568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" className="card-img-top" alt="..."></img>
-								<div className="card-body">
-									<p className="card-text">Title</p>
-								</div>
-							</div>
-						</Link>
-					</div>
+					{posts ? (
+						<div>
+							{posts.map((p) => (
+								<Posts post={p} />
+							))}
+						</div>
+					) : (
+						<p>No posts found</p>
+					)}
 				</div>
 			</div>
 		</section>
