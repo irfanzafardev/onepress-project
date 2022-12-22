@@ -60,7 +60,7 @@ section.category .featured-post .featured h2 {
 	letter-spacing: 0rem;
 }
 
-section.category.featured-post .featured img {
+section.category .featured-post .featured img {
 	width: 100%;
 	height: 500px;
 	border-radius: 0;

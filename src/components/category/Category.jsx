@@ -26,11 +26,11 @@ const Category = () => {
 				</div>
 				<div className="row featured">
 					{posts ? (
-						<div>
+						<>
 							{posts.map((post) => (
 								<Posts post={post} key={post._id} />
 							))}
-						</div>
+						</>
 					) : (
 						<p>No posts found</p>
 					)}
